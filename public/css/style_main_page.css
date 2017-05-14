@@ -1,0 +1,21 @@
+#page-content{
+padding-left:380px;
+
+}
+.vertical_text{
+-moz-transform: rotate(180deg);
+
+	    -webkit-transform: rotate(180deg);
+
+	    -o-transform: rotate(180deg);
+
+	    writing-mode: tb-rl;
+	
+}
+.panel-body{
+	height:350px;
+}
+.mar-hor{
+
+
+}

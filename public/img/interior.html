@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Lucia</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+    <!--Mobile-->
+    <meta name="format-detection" content="telephone=no">
+    <!--Click to Call by Skype-->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+
+<!-- Bpooking Modal -->
+<div class="md-modal md-effect-11" id="modal-11">
+    <div class="md-content">
+
+        <div class="md-header">
+            <div class="md-logo">
+                <a href="/"><img src="img/Logo_small.svg" alt=""></a>
+            </div>
+
+            <div class="md-close">
+                <img src="img/hamburger_close_gold.svg" alt="" class="show-hover">
+                <img src="img/hamburger_close_light.svg" alt="" class="">
+            </div>
+        </div>
+
+        <div class="md-text">
+            <h2 class="title">
+                Бронирование
+            </h2>
+
+            <div class="booking-form">
+                <form action="#">
+                <div>
+                    Здравствуйте, меня зовут <span>
+                        <!--<span class="input-booking-name">Ваше имя</span>-->
+                        <input type="text" class="fluid-input" id="booking-name" name="name" value="" placeholder="Ваше имя">
+                    </span>,
+                    я планирую провести <div id="event-holder">
+
+                    <input type="hidden" id="booking-event" name="event" value="Cвадьбу">
+
+                    <span class="selected hidden-xs">Cвадьбу</span>
+
+                    <div class="visible-xs">
+                        <select name="event" id="booking-event">
+                            <option value="">Cвадьбу</option>
+                            <option value="">Свадебную церемонию</option>
+                            <option value="">Юбилей</option>
+                            <option value="">Мальчишник</option>
+                            <option value="">Детский день рождения</option>
+                            <option value="">Конференцию</option>
+                            <option value="">Выездное обслуживание</option>
+                            <option value="">Корпоратив</option>
+                            <option value="">Фотосессию</option>
+                        </select>
+                    </div>
+
+                    <span class="events">
+
+                        <ul>
+                        <li><a href="">Cвадьбу</a></li>
+                        <li><a href="">Свадебную церемонию</a></li>
+                        <li><a href="">Юбилей</a></li>
+                        <li><a href="">Мальчишник</a></li>
+                        <li><a href="">Детский день рождения</a></li>
+
+                        <li><a href="">Конференцию</a></li>
+                        <li><a href="">Выездное обслуживание</a></li>
+                        <li><a href="">Корпоратив</a></li>
+                        <li><a href="">Фотосессию</a></li>
+                        </ul>
+                    </span>
+
+                </div>, дата
+                    проведения <span class="event-date">
+                    <input id="event-date" class="hidden-xs-inline" type="text" placeholder="дд.мм.гг">
+                    <input class="visible-xs-inline" id="event-date" type="date" placeholder="дд.мм.гг"></span> в
+                    <span><input type="time" placeholder="18:00" id="event-time"></span>, сервировка на
+                    <span><input type="number" min="1" placeholder="100" class="fluid-input" id="event-people"></span> персон.
+                </div>
+                <div class="contact-info">
+                    Со мной можно связаться по эл. почте <span><input type="email" placeholder="info@fresh-d.net" value="" class="fluid-input" id="event-email"></span>, или позвонив по телефону
+                    <span><input type="text" class="fluid-input" placeholder="+38 (ххх) ххх-хх-хх" id="event-phone"></span>.
+                </div>
+                <div class="advanced">
+                    <label for="">Дополнительную информация</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <div class="form-submit btn-default isi">
+                        <button  type="submit">Отправить заявку</button>
+                    </div>
+
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- Bpooking Modal -->
+
+<header id="header">
+
+    <div class="header-top">
+        <div class="container">
+
+            <div class="left hidden-sm">
+                <div class="phone">+38 (0562) 322-411</div>
+                <div class="address"><a href="">Украина, г. Днепропетровск, <br>
+                    ул. Камчатская, 63</a></div>
+            </div>
+
+            <div class="burger visible-sm">
+
+                <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
+
+            </div>
+
+            <div class="logo">
+                <a href="/"><img class="hidden-sm" src="img/Logo_big.svg" alt=""><img class="visible-sm" src="img/Logo_small.svg" alt=""></a>
+            </div>
+            <div class="booking">
+
+                <a href="#booking-form" class="visible-sm md-trigger" data-modal="modal-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="10.5834mm" height="10.4843mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 56 55"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <defs>
+                      <style type="text/css">
+                       <![CDATA[
+                        .fil0 {fill:#FEFEFE}
+                       ]]>
+                      </style>
+                       <clipPath id="id0">
+                        <path d="M54 55l-52 0c-1,0 -2,0 -2,-1l0 -47c0,-1 1,-2 2,-2l9 0 0 -1c0,-2 1,-4 3,-4l3 0c2,0 4,2 4,4l0 1 14 0 0 -1c0,-2 1,-4 4,-4l3 0c2,0 3,2 3,4l0 1 9 0c1,0 2,1 2,2l0 47c0,1 -1,1 -2,1zm-35 -52l-6 0 0 6 6 0 0 -6zm24 0l-6 0 0 6 6 0 0 -6zm11 6c0,-1 -1,-2 -2,-2l-7 0 0 1c0,2 -1,4 -3,4l-3 0c-3,0 -4,-2 -4,-4l0 -1 -14 0 0 1c0,2 -2,4 -4,4l-3 0c-2,0 -3,-2 -3,-4l0 -1 -7 0c-1,0 -2,1 -2,2l0 9 52 0 0 -9zm0 11l-52 0 0 31c0,1 1,2 2,2l48 0c1,0 2,-1 2,-2l0 -31zm-29 25l-6 -7 2 -2 5 5 11 -11 1 2 -11 11 -2 2z"/>
+                       </clipPath>
+                     </defs>
+                     <g id="Слой_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"/>
+                      <g style="clip-path:url(#id0)">
+                       <image x="-28" y="82" width="108" height="108" xlink:href="reserved_Images\reserved_ImgID1.png"/>
+                      </g>
+                      <path class="fil0" d="M54 55l-52 0c-1,0 -2,0 -2,-1l0 -47c0,-1 1,-2 2,-2l9 0 0 -1c0,-2 1,-4 3,-4l3 0c2,0 4,2 4,4l0 1 14 0 0 -1c0,-2 1,-4 4,-4l3 0c2,0 3,2 3,4l0 1 9 0c1,0 2,1 2,2l0 47c0,1 -1,1 -2,1zm-35 -52l-6 0 0 6 6 0 0 -6zm24 0l-6 0 0 6 6 0 0 -6zm11 6c0,-1 -1,-2 -2,-2l-7 0 0 1c0,2 -1,4 -3,4l-3 0c-3,0 -4,-2 -4,-4l0 -1 -14 0 0 1c0,2 -2,4 -4,4l-3 0c-2,0 -3,-2 -3,-4l0 -1 -7 0c-1,0 -2,1 -2,2l0 9 52 0 0 -9zm0 11l-52 0 0 31c0,1 1,2 2,2l48 0c1,0 2,-1 2,-2l0 -31zm-29 25l-6 -7 2 -2 5 5 11 -11 1 2 -11 11 -2 2z"/>
+                     </g>
+                    </svg>
+
+                </a>
+
+                <a class="btn-default isi hidden-sm md-trigger" data-modal="modal-11"><span>Бронирование</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <nav>
+            <ul>
+                <li class="parent">
+                    <a href="">Интерьеры</a>
+                    <div class="dropdown-container">
+                        <ul class="dropdown clearfix">
+                            <li><a href="">Банкетный</a></li>
+                            <li><a href="">Гостиный</a></li>
+                            <li><a href="">Лаунж</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="parent">
+                    <a href="">Торжества</a>
+                    <div class="dropdown-container">
+                        <ul class="dropdown clearfix">
+                            <li><a href="">Cвадьба</a></li>
+                            <li><a href="">Свадебная церемония</a></li>
+                            <li><a href="">Юбилей</a></li>
+                            <li><a href="">Мальчишник</a></li>
+                            <li><a href="">Детский день рождения</a></li>
+
+                            <li><a href="">Конференции</a></li>
+                            <li><a href="">Выездное обслуживание</a></li>
+                            <li><a href="">Корпоративы</a></li>
+                            <li><a href="">Фотосессии</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">История</a></li>
+                <li><a href="">Меню</a></li>
+                <li><a href="">Видео</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="box-top">
+    <div class="items">
+        <ul>
+            <!-- item -->
+            <li class="item active" data-slide="">
+                <div class="img"><i class="photo" style="background-image:url(img/interior/banquet.jpg)"></i></div>
+            </li>
+            <!-- item -->
+
+        </ul>
+
+    </div>
+</div>
+<!-- box-top -->
+
+<!--box-details -->
+<div class="box-details">
+    <div class="container">
+        <h1>Банкетный зал</h1>
+
+        <div class="subcaption">
+            Каждое событие в жизни должно быть незабываемым и необыкновенным.
+        </div>
+        <div class="description">
+            Мы сможем предложить всё необходимое, чтобы удовлетворить даже самые <br>взыскательные вкусы, и достойно провести любые торжества и мероприятия.
+        </div>
+
+        <div class="details clearfix">
+            <div class="row">
+                <div class="name">Общая площадь</div>
+                <div class="value">500 м2</div>
+            </div>
+            <div class="row">
+                <div class="name">Банкет</div>
+                <div class="value">50-200 персон</div>
+            </div>
+            <div class="row">
+                <div class="name">Фуршет</div>
+                <div class="value">350 персон</div>
+            </div>
+            <div class="row">
+                <div class="name">Видео</div>
+                <div class="value">9 плазм, проектор</div>
+            </div>
+            <div class="row">
+                <div class="name">Музыка</div>
+                <div class="value">Концертная система</div>
+            </div>
+            <div class="row">
+                <div class="name">Интернет</div>
+                <div class="value">Wi-Fi</div>
+            </div>
+            <div class="row">
+                <div class="name">Дополнительно</div>
+                <div class="value">Брендирование помещения</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--box-details -->
+
+<!-- box-interior-view -->
+<div class="box-interior-view">
+    <h2>Интерьер банкетного зала</h2>
+    <div class="description">
+        Вдохновляйтесь дизайнерским интерьером и его проявлением в деталях.
+    </div>
+
+    <div class="container">
+
+        <div id="interior-view-slider" class="anim-to">
+
+
+
+            <div class="slides">
+
+
+                <div class="room slick-show-button room-0" data-index="1">
+                    <a class="filter" href="img/interior/banquet_view_1.jpg">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+
+
+                <div class="room room-1" data-index="2">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+
+
+                <div class="room room-2" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="room room-3" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="room room-4" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="room room-5" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="room room-6" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="room room-7" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="room room-8" data-index="3">
+                    <a href="img/interior/banquet_view_1.jpg" class="filter">
+                        <img src="img/interior/banquet_view_1.jpg" alt="">
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <div class="interior-view-nav">
+                <a class="arrow-left prev" href="javascript:;" data-stroke-color="#44504c">
+                    <img class="show-hover" src="img/arrow_next_light.svg" alt="">
+                    <img src="img/arrow_prev_gold.svg" alt="">
+                </a>
+
+                <div class="numbers">
+                    <span class="current">1</span>
+                    <span>/</span>
+                    <span class="total all">9</span>
+                </div>
+
+                <a class="arrow-right next" href="javascript:;" data-stroke-color="#44504c">
+                    <img class="show-hover" src="img/arrow_next_light.svg" alt="">
+                    <img src="img/arrow_prev_gold.svg" alt="">
+                </a>
+
+            </div>
+
+            </div>
+        <!-- Slider -->
+
+    </div>
+
+
+
+</div>
+<!-- box-interior-view -->
+
+<!-- box-offer -->
+<div class="box-offer">
+    <h2>Мы всегда рады гостям</h2>
+    <div class="description">
+        Получить консультацию по интересующим вопросам относительно организации <br class="hidden-xs">праздника можно по телефону:
+        <br class="visible-xs">+38 (098) 9-322-411
+    </div>
+</div>
+<!-- box-offer -->
+
+<!-- box-interior-view -->
+<div class="box-interior-variants">
+
+    <div class="schemas">
+
+        <div class="schema-container">
+            <img class="active" src="img/map1.png" data-id="1" alt="">
+            <img src="img/map2.png" data-id="2" alt="">
+            <img src="img/map3.png" data-id="3" alt="">
+        </div>
+
+        <h2>различные Схемы расположения мебели</h2>
+
+        <div class="text">Благодаря большому пространству LUCIA Banquet Hall, расстановку мебели можно выполнить в зависимости от количества гостей.</div>
+
+        <div class="schema-toggler">
+            <a href="#" class="active" data-schema="1">50—70</a>
+            <a href="#" data-schema="2">80—100</a>
+            <a href="#" data-schema="3">200—250</a>
+        </div>
+
+    </div>
+</div>
+<!-- box-interior-view -->
+
+<div class="box-subscribe">
+    <form action="#">
+        <div class="container">
+
+            <h3 class="title">Подписка на <br class="visible-sm">новости</h3>
+
+            <div class="input-holder">
+                <input type="text" value="" placeholder="Ваша эл. почта">
+            </div>
+
+            <div class="submit-holder">
+                <button type="submit" class="btn-default ujarak"><span>подписаться</span></button>
+            </div>
+
+
+        </div>
+    </form>
+</div>
+<footer id="footer" class="clearfix">
+
+    <div class="container">
+
+        <div class="footer-nav clearfix">
+            <div class="interiors">
+                <div class="title opened">интерьеры
+
+                    <span class="visible-xs-inline">
+                        <img src="img/arrow_down_small.svg" alt="">
+                    </span>
+
+                </div>
+
+                <ul>
+                    <li><a href="">Банкетный</a></li>
+                    <li><a href="">Гостиный</a></li>
+                    <li><a href="">Лаунж</a></li>
+                </ul>
+            </div>
+            <!-- interiors -->
+
+            <div class="meetings">
+
+                <div class="title">Торжества
+                    <span class="visible-xs-inline">
+                        <img src="img/arrow_down_small.svg" alt="">
+                    </span>
+                </div>
+
+                <ul>
+
+                    <li><a href="">Cвадьба</a></li>
+                    <li><a href="">Свадебная церемония</a></li>
+                    <li><a href="">Юбилей</a></li>
+                    <li><a href="">Мальчишник</a></li>
+                    <li><a href="">Детский день рождения</a></li>
+
+                    <li><a href="">Конференции</a></li>
+                    <li><a href="">Выездное обслуживание</a></li>
+                    <li><a href="">Корпоративы</a></li>
+                    <li><a href="">Фотосессии</a></li>
+
+                </ul>
+            </div>
+            <!--meetings-->
+
+            <div class="system-links">
+                <ul>
+                    <li><a href="">История</a></li>
+                    <li><a href="">Меню</a></li>
+                    <li><a href="">Видео</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+            <!--system-links-->
+
+        </div>
+        <!--footer-nav-->
+
+
+        <div class="footer-left">
+            <div class="copyright">
+                © 2016 lucia banquet hall
+            </div>
+            <!--copyright-->
+
+            <div class="socials clearfix">
+                <a href="" class="fb-link"></a>
+                <a href="" class="instgr-link"></a>
+            </div>
+            <!--socials-->
+
+            <div class="developer">
+                <div class="dev-logo"><a href="//fresh-d.net"><img src="img/fresh_logo_gold.svg" alt="" class="show-hover"><img src="img/fresh_logo_grey.svg" alt=""></a></div>
+                <div class="clearfix"></div>
+                <a href="//fresh-d.net">Создание сайта —</a>
+                <span>Fresh Digital Agency</span>
+            </div>
+            <!--developer-->
+
+
+        </div>
+        <!--footer-left-->
+
+
+    </div>
+</footer>
+<script src="js/main.js"></script>
+
+<!-- SVG icons -->
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/svgicons/snap.svg-min.js"></script>
+
+<script src="js/svgicons/svgicons-config.js"></script>
+<script src="js/svgicons/svgicons.js"></script>
+
+
+<script>
+    new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600, size : { w :28, h : 58 }} );
+</script>
+
+</body>
+</html>
